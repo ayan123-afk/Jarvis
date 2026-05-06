@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S. - Just A Rather Very Intelligent System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="jarvis-container">
+        
+        <!-- Background Particles -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- Central HUD -->
+        <div class="hud-container">
+            
+            <!-- Top Status Bar -->
+            <div class="status-bar">
+                <div class="status-left">
+                    <span class="dot pulse"></span>
+                    J.A.R.V.I.S. ONLINE
+                </div>
+                <div class="status-right">
+                    <span id="time">00:00:00</span>
+                </div>
+            </div>
+            
+            <!-- Main ARC Reactor Circle -->
+            <div class="arc-reactor">
+                <div class="outer-ring"></div>
+                <div class="middle-ring"></div>
+                <div class="inner-ring"></div>
+                <div class="core">
+                    <div class="core-glow"></div>
+                </div>
+                <!-- Rotating Data Rings -->
+                <div class="data-ring ring-1"></div>
+                <div class="data-ring ring-2"></div>
+                <div class="data-ring ring-3"></div>
+            </div>
+            
+            <!-- Holographic Display Area -->
+            <div class="holo-display">
+                <div class="holo-header">
+                    <span class="holo-dot"></span>
+                    JARVIS INTERFACE v3.7
+                </div>
+                <div class="holo-content" id="responseText">
+                    <span class="typing-text">How may I assist you, sir?</span>
+                </div>
+                <div class="holo-wave" id="holoWave"></div>
+            </div>
+            
+            <!-- Command Input Area -->
+            <div class="command-area">
+                <div class="input-wrapper">
+                    <input type="text" id="commandInput" placeholder="Type command or say 'Jarvis'..." autofocus>
+                    <button id="sendBtn" class="neon-btn">
+                        <span class="btn-icon">▶</span>
+                    </button>
+                    <button id="voiceBtn" class="neon-btn mic-btn">
+                        <span class="btn-icon">🎤</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">SYSTEM</div>
+                    <div class="stat-value" id="systemStatus">OPTIMAL</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">RESPONSE</div>
+                    <div class="stat-value" id="responseTime">0.00s</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">COMMANDS</div>
+                    <div class="stat-value" id="commandCount">0</div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Listening Indicator -->
+        <div class="listening-indicator" id="listeningIndicator">
+            <div class="listening-bar"></div>
+            <div class="listening-bar"></div>
+            <div class="listening-bar"></div>
+            <div class="listening-bar"></div>
+            <div class="listening-bar"></div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
